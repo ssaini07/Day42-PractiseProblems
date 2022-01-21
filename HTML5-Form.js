@@ -9,3 +9,16 @@ text.addEventListener('input', function() {
         textError.textContent = "Sorry name is incorrect";
     }
 })
+
+//UC2 => User need to enter a valid email address
+
+const email = document.querySelector("#email");
+const emailError = document.querySelector(".email-error");
+email.addEventListener('input', function() {
+    let emailRegex = RegExp('^[a-z.+_-]+[.a-z0-9]*+@[a-z0-9]+[.a-z]+[.a-z0-9]*$');
+    if (emailRegex.test(email.value)) {
+        emailError.textContent = "";
+    } else {
+        emailError.textContent = "Entered email is not correct";
+    }
+})
