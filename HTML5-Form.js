@@ -14,7 +14,7 @@ text.addEventListener('input', function() {
 
 const email = document.querySelector("#email");
 const emailError = document.querySelector(".email-error");
-text.addEventListener('input', function() {
+email.addEventListener('input', function() {
     let emailRegex = RegExp('^[a-z.+_-]+[.a-z0-9]*+@[a-z0-9]+[.a-z]+[.a-z0-9]*$');
     if (emailRegex.test(email.value)) {
         emailError.textContent = "";
