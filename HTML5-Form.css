@@ -1,0 +1,50 @@
+.headerContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: tomato;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+body {
+    width: 100%;
+    max-width: 600px;
+    margin: 0, auto;
+    padding: 2em;
+}
+
+error-output {
+    font-size: 15px;
+    font-style: italic;
+    color: red;
+}
+
+form {
+    margin-top: 50px;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: auto;
+}
+
+label {
+    text-align: right;
+    width: 30%;
+    margin-right: 2%;
+}
+
+button {
+    width: 55%;
+    margin: 0, auto;
+    margin-left: 70px;
+    padding: 20px;
+    background-color: yellowgreen;
+}
