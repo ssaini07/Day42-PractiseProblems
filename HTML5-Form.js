@@ -8,17 +8,29 @@ text.addEventListener('input', function() {
     } else {
         textError.textContent = "Sorry name is incorrect";
     }
-})
+});
 
 //UC2 => User need to enter a valid email address
 
 const email = document.querySelector("#email");
 const emailError = document.querySelector(".email-error");
 email.addEventListener('input', function() {
-    let emailRegex = RegExp('^[a-z.+_-]+[.a-z0-9]*+@[a-z0-9]+[.a-z]+[.a-z0-9]*$');
+    let emailRegex = RegExp('^[a-z.+_-]+[.a-z0-9]*@[a-z0-9]+[.a-z]+[.a-z0-9]*$');
     if (emailRegex.test(email.value)) {
         emailError.textContent = "";
     } else {
         emailError.textContent = "Entered email is not correct";
     }
-})
+});
+
+//UC3 => User need to follow a pre-defined mobile format
+const tel = document.querySelector("#tel");
+const telError = document.querySelector(".tel-error");
+tel.addEventListener('input', function() {
+    let telRegex = RegExp('^([0-9]{2}\\s)?[0-9]{10}$');
+    if (telRegex.test(tel.value)) {
+        telError.textContent = "";
+    } else {
+        telError.textContent = "Entered phone number is not correct";
+    }
+});
