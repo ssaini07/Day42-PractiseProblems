@@ -34,3 +34,15 @@ tel.addEventListener('input', function() {
         telError.textContent = "Entered phone number is not correct";
     }
 });
+
+//UC4 => User need to follow pre-defined password rules
+const pass = document.getElementById("#pwd");
+const passError = document.querySelector(".password-error");
+pass.addEventListener('input', function() {
+    let passwordRegex = RegExp('^[a-z0-9]{8,}$');
+    if (passwordRegex.test(pass.value)) {
+        passError.textContent = "";
+    } else {
+        passError.textContent = "Entered password is not correct";
+    }
+})
