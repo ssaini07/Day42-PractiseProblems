@@ -46,3 +46,15 @@ pass.addEventListener('input', function() {
         passError.textContent = "Entered password is not correct";
     }
 })
+
+//UC5 => Four rules are there to be matched
+const pass = document.getElementById("#pwd");
+const passError = document.querySelector(".password-error");
+pass.addEventListener('input', function() {
+    let passwordRegex = RegExp('^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$');
+    if (passwordRegex.test(pass.value)) {
+        passError.textContent = "";
+    } else {
+        passError.textContent = "Entered password is not correct";
+    }
+})
